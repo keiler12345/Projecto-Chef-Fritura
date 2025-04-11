@@ -72,7 +72,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(78, 78, 78))
         );
