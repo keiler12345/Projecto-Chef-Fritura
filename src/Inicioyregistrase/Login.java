@@ -1,5 +1,5 @@
 
-package loginandsignup;
+package Inicioyregistrase;
 
 
 public class Login extends javax.swing.JFrame {
