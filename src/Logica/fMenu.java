@@ -30,7 +30,7 @@ public class fMenu {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
         
-        sSql = "select * from menu where piso like '%" + buscar + "%' order by menu";
+        sSql = "select * from menu where numero_plato like '%" + buscar + "%' order by id";
         
         try {
             Statement st = (Statement) cn.createStatement();

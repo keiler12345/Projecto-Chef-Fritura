@@ -15,8 +15,8 @@ public class vOferta {
     private String nombre_oferta;
     private String descripcion;
     private double descuento_porcentaje;
-   private LocalDate fecha_inicio;
-   private LocalDate fecha_fin;
+    private LocalDate fecha_inicio;
+    private LocalDate fecha_fin;
 
     public vOferta(int id, String nombre_oferta, String descripcion, double descuento_porcentaje, LocalDate fecha_inicio, LocalDate fecha_fin) {
         this.id = id;
