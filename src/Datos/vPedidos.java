@@ -1,7 +1,7 @@
 
 package Datos;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 
 public class vPedidos {
