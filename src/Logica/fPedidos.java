@@ -1,6 +1,7 @@
 
 package Logica;
 
+import Datos.vPedidos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,7 +32,45 @@ public class fPedidos {
             
             while (rs.next()){
                 registro[0] = String.valueOf(rs.getInt("id"));
+                registro[1] = String.valueOf(rs.getInt("id_cliente"));
+                registro[2] = String.valueOf(rs.getInt("numero_plato"));
+                registro[3] = String.valueOf(rs.getInt("id_bebida"));
+                registro[4] = rs.getTimestamp("fecha_pedido").toString();
+                registro[5] = rs.getString("modo_consumo");
+                registro[6] = String.valueOf(rs.getDouble("total"));
+                
+                totalregistros++;
+                modelo.addRow(registro);
+                
             }
+             
+            return modelo;
+        }catch (Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+            return null;
+        }
+        
+        public boolean insertar(vPedidos dts){
+            
+            sSQL = "INSERT INTO pedidos (id_cliente, numero_plato, id_bebida, fecha_pedido, modo_consumo, total)" + "VALUES (?, ?, ?, ?, ?, ?)";
+            
+            try{
+                PreparedStatement pst = cn.prepareStatement(sSQL);
+                pst.setInt(1, dts.getId_cliente());
+                pst.setInt(2, dts.getNumero_plato());
+                pst.setInt(3, dts.getId_bebida());
+                pst.setTimestamp(4, dts.getFecha_pedido());
+                pst.setString(5, dts.getModo_consumo());
+                pst.setDouble(6, dts.getTotal());
+                
+                int n = pst.executeUpdate();
+                return n !=0;
+                
+            }catch (Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+            return false;
+        }
+            
         }
         
     }
