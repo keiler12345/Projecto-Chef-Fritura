@@ -50,7 +50,7 @@ public class SignUp extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("© 2025 Chef Fritura. Todos los derechos reservados ");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/salami.jpg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Empanadas - Beef Turnovers.jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -118,9 +118,14 @@ public class SignUp extends javax.swing.JFrame {
 
         jLabel8.setText("Ya tengo una cuenta");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Crear cuenta");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Iniciar Sesion");
@@ -210,6 +215,10 @@ public class SignUp extends javax.swing.JFrame {
         LoginFrame.setLocationRelativeTo(null); 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
