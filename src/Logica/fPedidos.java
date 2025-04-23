@@ -49,8 +49,8 @@ public class fPedidos {
             JOptionPane.showConfirmDialog(null, e);
             return null;
         }
-        
-        
+
+    }
 
     public boolean insertar(vPedidos dts) {
         sSQL = "INSERT INTO pedidos (id_cliente, numero_plato, id_bebida, fecha_pedido, modo_consumo, total)" + "VALUES (?, ?, ?, ?, ?, ?)";
@@ -76,9 +76,9 @@ public class fPedidos {
 
     public boolean editar(vPedidos dts) {
         sSQL = "UPDATE pedidos SET id_cliente=?, numero_plato=?, id_bebida=?, fecha_pedido=?, modo_consumo=?, total=?" + "WHERE id=?";
-        
-        try{
-            
+
+        try {
+
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setInt(1, dts.getId_cliente());
             pst.setInt(2, dts.getNumero_plato());
@@ -90,13 +90,28 @@ public class fPedidos {
 
             int n = pst.executeUpdate();
             return n != 0;
-            
-        }catch (SQLException e) {
+
+        } catch (SQLException e) {
             JOptionPane.showConfirmDialog(null, e);
             return false;
 
+        }
     }
 
-}
+    public boolean eliminar(vPedidos dts) {
+        sSQL = "DELETE FROM Pedidos WHERE id=?";
+        try {
+            PreparedStatement pst = cn.prepareStatement(sSQL);
+            pst.setInt(1, dts.getId());
+
+            int n = pst.executeUpdate();
+            return n != 0;
+
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+            return false;
+        }
+
+    }
 
 }
