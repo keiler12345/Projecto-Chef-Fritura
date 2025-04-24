@@ -5,7 +5,7 @@ package Datos;
  *
  * @author franc
  */
-public class vBebidas {
+public class Menu {
     private int id_bebida;
     private String nombre_bebida;
     private String tipo;
@@ -13,7 +13,7 @@ public class vBebidas {
     private Double precio; 
     private String disponible;
 
-    public vBebidas(int id_bebida, String nombre_bebida, String tipo, String tamano, Double precio, String disponible) {
+    public Menu(int id_bebida, String nombre_bebida, String tipo, String tamano, Double precio, String disponible) {
         this.id_bebida = id_bebida;
         this.nombre_bebida = nombre_bebida;
         this.tipo = tipo;
@@ -22,7 +22,7 @@ public class vBebidas {
         this.disponible = disponible;
     }
 
-    public vBebidas() {
+    public Menu() {
     }
 
     public int getId_bebida() {
