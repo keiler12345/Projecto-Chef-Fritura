@@ -23,7 +23,7 @@ public class fTrabajadores {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE '%" + buscar + "%' ORDER BY id DESC";
+        sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE '%" + buscar + "%' ORDER BY id ASC";
 
         try {
             Statement st = cn.createStatement();

@@ -11,7 +11,7 @@ public class vPedidos {
     private int numero_plato;
     private int id_bebida;
     private Timestamp fecha_pedido;
-    private String modo_consumo; // ´Aqui´ o Para llevar´
+    private String modo_consumo; // ´Aqui´ o ´Para llevar´
     private double total;
 
     public vPedidos(int id, int id_cliente, int numero_plato, int id_bebida, Timestamp fecha_pedido, String modo_consumo, double total) {

@@ -24,7 +24,7 @@ public class fPedidos {
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "SELECT * FROM pedidos WHERE id_cliente LIKE ´%" + buscar + "%´ ORDER BY id";
+        sSQL = "SELECT * FROM pedidos WHERE id_cliente LIKE ´%" + buscar + "%´ ORDER BY id ASC";
 
         try {
             Statement st = cn.createStatement();
