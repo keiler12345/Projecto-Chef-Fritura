@@ -93,7 +93,7 @@ public class Home extends javax.swing.JFrame {
         btnCategorias.setForeground(new java.awt.Color(255, 250, 225));
         btnCategorias.setText("Categorías");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Logo empresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo empresa.png"))); // NOI18N
         jLabel2.setText("Logo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
