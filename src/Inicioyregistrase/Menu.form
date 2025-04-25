@@ -476,7 +476,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/__&#xd83e;&#xdd65;&#xd83c;&#xdf4c; &#xa1;Delicioso Mofongo Tradicional! &#xd83c;&#xdf4c;&#xd83e;&#xdd65;__ Un plato ic&#xf3;nico de la gastronom&#xed;a caribe&#xf1;a que te har&#xe1; viajar al para&#xed;so con cada bocado_ &#xd83c;&#xdf34;&#x2728; &#xa1;Ll&#xe9;nalo de sabor y disfruta esta delicia puertorrique&#xf1;a e.jpg"/>
+              <Image iconType="3" name="/Imagenes/"/> >
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
@@ -500,7 +500,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Dominican Yuca con Mojo &#x2013; Familia Kitchen.jpg"/>
+              <Image iconType="3" name="/Imagenes/Dominican Yuca con Mojo; Familia Kitchen.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel9"/>
           </Properties>
@@ -519,7 +519,7 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Portuguese Frango no Churrasco (Grilled Chicken)_Portuguese-style grilled chicken is gaining traction for its smoky, spiced flavors___Ingredients___4 chicken legs or thighs_&#xbc; cup olive oil_2 tbsp pir.jpg"/>
+              <Image iconType="3" name="/Imagenes/Portuguese Frango no Churrasco (Grilled Chicken)_Portuguese-style grilled chicken is gaining traction for its smoky, spiced flavors___Ingredients___4 chicken legs or thighs_; cup olive oil_2 tbsp pir.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel10"/>
           </Properties>
@@ -543,7 +543,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/&#xd83c;&#xdf56; Mixed Grill Platter with Fries &#xd83c;&#xdf5f;_Ready to satisfy your hunger_ This Mixed Grill Platter pairs juicy, grilled meats with golden, crispy fries and a creamy, tangy dipping sauce_ Perfect for BBQ nig.jpg"/>
+              <Image iconType="3" name="/Imagenes/; Mixed Grill Platter with Fries;_Ready to satisfy your hunger_ This Mixed Grill Platter pairs juicy, grilled meats with golden, crispy fries and a creamy, tangy dipping sauce_ Perfect for BBQ nig.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
@@ -572,7 +572,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Men&#xfa;"/>
+            <Property name="text" type="java.lang.String" value="Men;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton1">
@@ -602,7 +602,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
@@ -654,7 +654,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton9">
@@ -678,7 +678,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton12">
@@ -732,7 +732,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton18">
@@ -911,7 +911,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque;o"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton20ActionPerformed"/>
@@ -938,7 +938,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton24">
@@ -962,7 +962,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton27">
@@ -986,7 +986,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton30">
@@ -1010,7 +1010,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Peque1;o"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton33">
@@ -1034,7 +1034,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+            <Property name="text" type="java.lang.String" value="Pequeo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton35ActionPerformed"/>
