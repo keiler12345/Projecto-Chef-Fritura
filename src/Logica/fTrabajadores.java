@@ -16,38 +16,44 @@ public class fTrabajadores {
     public Integer totalregistros;
 
     public DefaultTableModel mostrar(String buscar) {
-        DefaultTableModel modelo;
-        String[] titulos = {"ID", "Usuario", "Tipo Acceso", "Contraseña", "Nombre Completo", "Fecha Ingreso"};
-        String[] registro = new String[6];
+    DefaultTableModel modelo;
+    String[] titulos = {"ID", "Usuario", "Tipo Acceso", "Contraseña", "Nombre Completo", "Fecha Ingreso"};
+    String[] registro = new String[6];
 
-        totalregistros = 0;
-        modelo = new DefaultTableModel(null, titulos);
+    totalregistros = 0;
+    modelo = new DefaultTableModel(null, titulos);
 
-        sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE '%" + buscar + "%' ORDER BY id ASC";
+    sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE ? ORDER BY id ASC";
 
-        try {
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sSQL);
+    try {
+        PreparedStatement pst = cn.prepareStatement(sSQL);
+        pst.setString(1, "%" + buscar + "%");
+        ResultSet rs = pst.executeQuery();
 
-            while (rs.next()) {
-                registro[0] = String.valueOf(rs.getInt("id"));
-                registro[1] = rs.getString("nombre_usuario");
-                registro[2] = rs.getString("tipo_acceso");
-                registro[3] = rs.getString("contraseña");
-                registro[4] = rs.getString("nombre_completo");
-                registro[5] = rs.getDate("fecha_ingreso").toString();
+        while (rs.next()) {
+            registro[0] = String.valueOf(rs.getInt("id"));
+            registro[1] = rs.getString("nombre_usuario");
+            registro[2] = rs.getString("tipo_acceso");
+            registro[3] = rs.getString("contraseña");
+            registro[4] = rs.getString("nombre_completo");
+            registro[5] = rs.getDate("fecha_ingreso").toString();
 
-                totalregistros++;
-                modelo.addRow(registro);
-            }
-
-            return modelo;
-
-        } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, e);
-            return null;
+            totalregistros++;
+            modelo.addRow(registro);
         }
+
+        if (totalregistros == 0) {
+            JOptionPane.showMessageDialog(null, "No se encontraron trabajadores con ese nombre.");
+        }
+
+        return modelo;
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error en mostrar: " + e.getMessage());
+        return null;
     }
+}
+
 
     public boolean insertar(vTrabajadores dts) {
         sSQL = "INSERT INTO Trabajadores (nombre_usuario, tipo_acceso, contraseña, nombre_completo, fecha_ingreso) " +
