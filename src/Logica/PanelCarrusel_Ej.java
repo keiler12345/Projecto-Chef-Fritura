@@ -1,5 +1,5 @@
 
-package Inicioyregistrase;
+package Logica;
 
 import javax.swing.*;
 import java.awt.*;

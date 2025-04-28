@@ -1,7 +1,7 @@
 
 package Logica;
 
-import Datos.Menu;
+import Datos.vBebidas;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,7 +55,7 @@ public class fBebida {
         
     }
      //Funcion para insertar registros de la tabla bebidas 
-    public boolean insertar (Menu dts){
+    public boolean insertar (vBebidas dts){
         sSQL="insert into bebidas (nombre_bebida,tipo,tamano,precio,disponible)" +
                 "values(?,?,?,?,?)";
         try {
@@ -87,7 +87,7 @@ public class fBebida {
         
     }
     //Funcion para editar registros de la tabla bebidas 
-    public boolean editar (Menu dts){
+    public boolean editar (vBebidas dts){
         sSQL="update bebidas set nombre_bebidas=?,tipo=?,tamano=?,precio=?,disponible=?" +
                 "where id=?";
         try {
@@ -117,7 +117,7 @@ public class fBebida {
         
     }
     //Funcion para eliminar registros de la tabla bebidas
-     public boolean eliminar (Menu dts){
+     public boolean eliminar (vBebidas dts){
          sSQL="delete from bebidas where id=?";
             
         try {
