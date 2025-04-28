@@ -1,6 +1,10 @@
 
 package Inicioyregistrase;
 
+import Datos.vTrabajadores;
+import Logica.fTrabajadores;
+import javax.swing.table.DefaultTableModel;
+
 
 public class Login extends javax.swing.JFrame {
 
@@ -9,6 +13,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Acceso al sistema");
         this.setLocationRelativeTo(null);
+        
     }
 
  
@@ -18,6 +23,8 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         Right = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -37,6 +44,8 @@ public class Login extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TablaListado = new javax.swing.JTable();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -51,6 +60,19 @@ public class Login extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Chicharrones-de-cerdo.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -93,11 +115,11 @@ public class Login extends javax.swing.JFrame {
             .addGroup(RightLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(RightLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,7 +138,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addGap(231, 231, 231)
+                .addGap(439, 439, 439)
                 .addComponent(jLabel6)
                 .addGap(92, 92, 92)
                 .addComponent(jLabel5)
@@ -181,6 +203,19 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        TablaListado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(TablaListado);
+
         javax.swing.GroupLayout LeftLayout = new javax.swing.GroupLayout(Left);
         Left.setLayout(LeftLayout);
         LeftLayout.setHorizontalGroup(
@@ -205,7 +240,8 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(txtusuario)))
                     .addGroup(LeftLayout.createSequentialGroup()
                         .addGap(81, 81, 81)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
         LeftLayout.setVerticalGroup(
@@ -223,15 +259,18 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(jLabel12)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jButton2))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addGap(51, 51, 51))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.add(Left);
@@ -266,6 +305,23 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        try {
+            DefaultTableModel modelo;
+            fTrabajadores fun=new fTrabajadores();
+            vTrabajadores dts =new vTrabajadores();
+            
+           dts.setNombre_usuario(txtusuario.getText());
+           dts.setContraseña(txtpass.getText());
+           
+           modelo=fun.login(dts.getNombre_usuario(),dts.getContraseña());
+           
+           
+           
+           
+            
+        } catch (Exception e) {
+        }
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -280,6 +336,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
+    private javax.swing.JTable TablaListado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -297,6 +354,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable2;
     private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
