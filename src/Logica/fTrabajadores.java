@@ -10,6 +10,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class fTrabajadores {
+
+    public static void setModel(DefaultTableModel modelo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private conexion mysql = new conexion();
     private Connection cn = mysql.conectar();
     private String sSQL = "";
@@ -112,6 +116,46 @@ public class fTrabajadores {
             JOptionPane.showConfirmDialog(null, e);
             return false;
         }
+    }
+    
+        public DefaultTableModel login(String usuario,String contraseña) {
+        DefaultTableModel modelo;
+
+        String[] titulos = {"ID", "Usuario", "Acceso", "Comtraseña","Nombre","Login","Fecha"};
+
+        String[] registro = new String[7];
+
+        totalregistros = 0;
+        modelo = new DefaultTableModel(null, titulos);
+
+        sSQL = "select id,nombre_usuario,tipo_acceso,contrseña,"
+                + "nombre_completo,fecha_ingreso from trabajadores"
+                + "on p.idpersona=t.idpersona where t.nombre_usuario='"
+                + usuario + "' and t.contaseña='" + contraseña;
+
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sSQL);
+
+            while (rs.next()) {
+                registro[0] = rs.getString("id");
+                registro[1] = rs.getString("nombre_usuario");
+                registro[2] = rs.getString("tipo_acceso");
+                registro[3] = rs.getString("contraseña");
+                registro[4] = rs.getString("nombre_completo");
+                registro[5] = rs.getString("fecha_ingreso");
+                
+                totalregistros = totalregistros + 1;
+                modelo.addRow(registro);
+
+            }
+            return modelo;
+
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+            return null;
+        }
+
     }
 }
 

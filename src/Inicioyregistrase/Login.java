@@ -4,7 +4,8 @@ package Inicioyregistrase;
 import Datos.vTrabajadores;
 import Logica.fTrabajadores;
 import javax.swing.table.DefaultTableModel;
-
+import Logica.Home;
+import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
@@ -314,6 +315,32 @@ public class Login extends javax.swing.JFrame {
            dts.setContraseña(txtpass.getText());
            
            modelo=fun.login(dts.getNombre_usuario(),dts.getContraseña());
+           
+           TablaListado.setModel(modelo);
+           
+            if (fun.totalregistros>0) {
+                
+                this.dispose();
+                
+                Home form =new Home();
+                form.toFront();
+                form.setVisible(true);
+                
+                Home.lblacceso.setText(TablaListado.getValueAt(0,0).toString());
+                if (!Home.lblacceso.getText().equals("Administrador")) {
+                    
+                    
+                    
+                }
+                
+                
+            }
+            
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Acceso Denegado","Acceso al Sistema",JOptionPane.ERROR_MESSAGE);
+                
+            
+            }
            
            
            
