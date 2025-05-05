@@ -1,5 +1,7 @@
-
 package Inicioyregistrase;
+
+import Inicioyregistrase.Login;
+import Inicioyregistrase.SignUp;
 
 public class LoginAndSignUp {
 

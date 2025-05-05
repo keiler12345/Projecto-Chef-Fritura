@@ -11,12 +11,22 @@ public class vClientes {
     private String telefono_cliente;
     private String direccion;
     private String manera_pago;
+    private String nombre_usuario;
 
-    public vClientes(int id_cliente, String nombre_cliente, String telefono_cliente, String direccion) {
+    public vClientes(int id_cliente, String nombre_cliente, String telefono_cliente, String direccion, String nombre_usuario) {
         this.id_cliente = id_cliente;
         this.nombre_cliente = nombre_cliente;
         this.telefono_cliente = telefono_cliente;
         this.direccion = direccion;
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    public String getNombre_usuario() {
+        return nombre_usuario;
+    }
+
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
     }
 
     public vClientes() {

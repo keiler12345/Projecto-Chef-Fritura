@@ -1,15 +1,20 @@
-
 package Inicioyregistrase;
 
+import Datos.vPersona;
+import Datos.vTrabajadores;
+import Logica.fTrabajadores;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
+import Logica.fPersona;
+import Inicioyregistrase.Login;
+import Inicioyregistrase.Home;
 
 public class SignUp extends javax.swing.JFrame {
 
- 
     public SignUp() {
         initComponents();
     }
 
-  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -244,13 +249,56 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        // Paso 1: Obtener los datos del formulario
+        String usuario = jTextField1.getText(); // Nombre de usuario
+        String correo = jTextField2.getText(); // Correo electrónico
+        String contrasena = new String(jPasswordField1.getPassword()); // Contraseña
+
+// Paso 2: Validar que los campos no estén vacíos
+        if (usuario.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, llena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+// Paso 3: Crear un objeto vPersona con los datos
+        vPersona persona = new vPersona();
+        persona.setNombre_usuario(usuario);
+        persona.setCorreo_electronico(correo);
+        persona.setPassword(contrasena);
+
+// Paso 4: Crear una instancia de fPersona para registrar al usuario
+        fPersona registroPersona = new fPersona();
+        boolean registroExitoso = false;
+
+        try {
+            // Intentar registrar el usuario en la base de datos
+            registroExitoso = registroPersona.registrar(persona);
+        } catch (Exception e) {
+            // Si ocurre un error durante el registro
+            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos. Intenta de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace(); // Opcional, para depuración
+        }
+
+// Paso 5: Verificar si el registro fue exitoso
+        if (registroExitoso) {
+            JOptionPane.showMessageDialog(this, "Registro exitoso. Ahora puedes navegar en nuestra aplicación", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+            // Crear la nueva instancia de la ventana Home
+            Home home = new Home();
+            home.setVisible(true);
+
+            // Cerrar la ventana actual de Login
+            this.dispose(); // Cerrar la ventana de registro/login
+        } else {
+            // Si ocurre un error en el registro
+            JOptionPane.showMessageDialog(this, "Error al registrar el usuario. Intenta de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     /**
      * @param args the command line arguments
      */
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Right;

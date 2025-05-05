@@ -1,22 +1,21 @@
-
 package Inicioyregistrase;
 
 import Datos.vTrabajadores;
 import Logica.fTrabajadores;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+import Logica.fPersona;
+import Inicioyregistrase.SignUp;
 
 public class Login extends javax.swing.JFrame {
 
-  
     public Login() {
         initComponents();
         this.setTitle("Acceso al sistema");
         this.setLocationRelativeTo(null);
-        
+
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -292,59 +291,70 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        
+
         SignUp SignUpFrame = new SignUp();
         SignUpFrame.setVisible(true);
         SignUpFrame.pack();
-        SignUpFrame.setLocationRelativeTo(null); 
+        SignUpFrame.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
-        try {
-            DefaultTableModel modelo;
-            fTrabajadores fun=new fTrabajadores();
-            vTrabajadores dts =new vTrabajadores();
-            
-           dts.setNombre_usuario(txtusuario.getText());
-           dts.setContraseña(txtpass.getText());
-           
-           modelo=fun.login(dts.getNombre_usuario(),dts.getContraseña());
-           
-           TablaListado.setModel(modelo);
-           
-            if (fun.totalregistros>0) {
-                
-                this.dispose();
-                
-                Home form =new Home();
-                form.toFront();
-                form.setVisible(true);
-                
-                Home.lblacceso.setText(TablaListado.getValueAt(0,0).toString());
-                if (!Home.lblacceso.getText().equals("Administrador")) {
-                    
-                    
-                    
-                }
-                
-                
-            }
-            
-            else{
-                JOptionPane.showMessageDialog(rootPane, "Acceso Denegado","Acceso al Sistema",JOptionPane.ERROR_MESSAGE);
-                
-            
-            }
-           
-           
-           
-           
-            
-        } catch (Exception e) {
+        // Paso 1: Obtener el nombre de usuario y contraseña
+        String usuario = txtusuario.getText(); // Suponiendo que txtUsuario es el campo de texto para el usuario
+        String contraseña = new String(txtpass.getPassword()); // Suponiendo que txtContraseña es el campo de texto para la contraseña
+
+        // Paso 2: Validar si los campos no están vacíos
+        if (usuario.isEmpty() || contraseña.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, ingresa ambos campos: usuario y contraseña", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-       
+
+        // Paso 3: Crear instancia de fPersona para verificar login
+        fPersona log = new fPersona();
+        String rol = log.login(usuario, contraseña);
+
+        // Paso 4: Validar si el login fue exitoso
+        if (rol == null) {
+            // Si no se encuentra el usuario o la contraseña no coincide
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Login exitoso, el rol se ha obtenido correctamente
+            if (rol.equals("Cliente")) {
+                // Si es un Cliente, hacer lo siguiente
+                JOptionPane.showMessageDialog(this, "Login exitoso como Cliente", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
+                // Redirigir a la pantalla del cliente
+                Home home = new Home();
+                home.setVisible(true);
+                this.dispose();
+
+            } else if (rol.equals("Trabajador")) {
+                // Si es un Trabajador, hacer lo siguiente
+                fTrabajadores logTrabajador = new fTrabajadores();
+                DefaultTableModel modelo = logTrabajador.login(usuario, contraseña);
+
+                // Verificar si el login fue exitoso
+                if (modelo != null && modelo.getRowCount() > 0) {
+                    // Login exitoso para el trabajador, accede a su tipo de acceso
+                    String tipoAcceso = modelo.getValueAt(0, 2).toString(); // Obtener el tipo de acceso (ej. Cajero, Cocinero, etc.)
+
+                    JOptionPane.showMessageDialog(this, "Login exitoso como " + tipoAcceso, "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
+
+                    // Redirigir a la pantalla correspondiente según el tipo de acceso
+                    if (tipoAcceso.equals("Administrador")) {
+                        Home home = new Home();
+                        home.setVisible(true);
+                        this.dispose();
+                    } else if (tipoAcceso.equals("Cajero")) {
+                        // new CajeroForm().setVisible(true); // Ejemplo para Cajero
+                    }
+                    // Agrega más condiciones para otros tipos de acceso como Cocinero, Mesero, etc.
+                } else {
+                    // Si no encuentra al trabajador o hay un error en la base de datos
+                    JOptionPane.showMessageDialog(this, "No se pudo verificar el trabajador", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -354,7 +364,6 @@ public class Login extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;

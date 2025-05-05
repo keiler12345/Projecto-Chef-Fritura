@@ -1,4 +1,3 @@
-
 package Logica;
 
 import Datos.vTrabajadores;
@@ -11,93 +10,84 @@ import javax.swing.table.DefaultTableModel;
 
 public class fTrabajadores {
 
-    public static void setModel(DefaultTableModel modelo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     private conexion mysql = new conexion();
     private Connection cn = mysql.conectar();
     private String sSQL = "";
     public Integer totalregistros;
 
     public DefaultTableModel mostrar(String buscar) {
-    DefaultTableModel modelo;
-    String[] titulos = {"ID", "Usuario", "Tipo Acceso", "Contraseña", "Nombre Completo", "Fecha Ingreso"};
-    String[] registro = new String[6];
+        DefaultTableModel modelo;
+        String[] titulos = {"ID", "Usuario", "Tipo Acceso", "Nombre Completo", "Fecha Ingreso"};
+        String[] registro = new String[5];
 
-    totalregistros = 0;
-    modelo = new DefaultTableModel(null, titulos);
+        totalregistros = 0;
+        modelo = new DefaultTableModel(null, titulos);
 
-    sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE ? ORDER BY id ASC";
+        sSQL = "SELECT * FROM Trabajadores WHERE nombre_usuario LIKE ? ORDER BY id ASC";
 
-    try {
-        PreparedStatement pst = cn.prepareStatement(sSQL);
-        pst.setString(1, "%" + buscar + "%");
-        ResultSet rs = pst.executeQuery();
+        try {
+            PreparedStatement pst = cn.prepareStatement(sSQL);
+            pst.setString(1, "%" + buscar + "%");
+            ResultSet rs = pst.executeQuery();
 
-        while (rs.next()) {
-            registro[0] = String.valueOf(rs.getInt("id"));
-            registro[1] = rs.getString("nombre_usuario");
-            registro[2] = rs.getString("tipo_acceso");
-            registro[3] = rs.getString("contraseña");
-            registro[4] = rs.getString("nombre_completo");
-            registro[5] = rs.getDate("fecha_ingreso").toString();
+            while (rs.next()) {
+                registro[0] = String.valueOf(rs.getInt("id"));
+                registro[1] = rs.getString("nombre_usuario");
+                registro[2] = rs.getString("tipo_acceso");
+                registro[3] = rs.getString("nombre_completo");
+                registro[4] = rs.getDate("fecha_ingreso").toString();
 
-            totalregistros++;
-            modelo.addRow(registro);
+                totalregistros++;
+                modelo.addRow(registro);
+            }
+
+            if (totalregistros == 0) {
+                JOptionPane.showMessageDialog(null, "No se encontraron trabajadores con ese nombre.");
+            }
+
+            return modelo;
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error en mostrar: " + e.getMessage());
+            return null;
         }
-
-        if (totalregistros == 0) {
-            JOptionPane.showMessageDialog(null, "No se encontraron trabajadores con ese nombre.");
-        }
-
-        return modelo;
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Error en mostrar: " + e.getMessage());
-        return null;
     }
-}
-
 
     public boolean insertar(vTrabajadores dts) {
-        sSQL = "INSERT INTO Trabajadores (nombre_usuario, tipo_acceso, contraseña, nombre_completo, fecha_ingreso) " +
-               "VALUES (?, ?, ?, ?, ?)";
+        sSQL = "INSERT INTO Trabajadores (nombre_usuario, tipo_acceso, nombre_completo, fecha_ingreso) VALUES (?, ?, ?, ?)";
 
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setString(1, dts.getNombre_usuario());
             pst.setString(2, dts.getTipo_acceso());
-            pst.setString(3, dts.getContraseña());
-            pst.setString(4, dts.getNombre_completo());
-            pst.setDate(5, dts.getFecha_ingreso());
+            pst.setString(3, dts.getNombre_completo());
+            pst.setDate(4, dts.getFecha_ingreso());
 
             int n = pst.executeUpdate();
             return n != 0;
 
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Error al insertar trabajador: " + e.getMessage());
             return false;
         }
     }
 
     public boolean editar(vTrabajadores dts) {
-        sSQL = "UPDATE Trabajadores SET nombre_usuario=?, tipo_acceso=?, contraseña=?, nombre_completo=?, fecha_ingreso=? " +
-               "WHERE id=?";
+        sSQL = "UPDATE Trabajadores SET nombre_usuario=?, tipo_acceso=?, nombre_completo=?, fecha_ingreso=? WHERE id=?";
 
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setString(1, dts.getNombre_usuario());
             pst.setString(2, dts.getTipo_acceso());
-            pst.setString(3, dts.getContraseña());
-            pst.setString(4, dts.getNombre_completo());
-            pst.setDate(5, dts.getFecha_ingreso());
-            pst.setInt(6, dts.getId());
+            pst.setString(3, dts.getNombre_completo());
+            pst.setDate(4, dts.getFecha_ingreso());
+            pst.setInt(5, dts.getId());
 
             int n = pst.executeUpdate();
             return n != 0;
 
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Error al editar trabajador: " + e.getMessage());
             return false;
         }
     }
@@ -113,49 +103,45 @@ public class fTrabajadores {
             return n != 0;
 
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Error al eliminar trabajador: " + e.getMessage());
             return false;
         }
     }
-    
-        public DefaultTableModel login(String usuario,String contraseña) {
-        DefaultTableModel modelo;
 
-        String[] titulos = {"ID", "Usuario", "Acceso", "Comtraseña","Nombre","Login","Fecha"};
+    public DefaultTableModel login(String usuario, String password) {
+    DefaultTableModel modelo;
+    String[] titulos = {"ID", "Usuario", "Acceso", "Nombre", "Fecha Ingreso"};
+    String[] registro = new String[5];
 
-        String[] registro = new String[7];
+    totalregistros = 0;
+    modelo = new DefaultTableModel(null, titulos);
 
-        totalregistros = 0;
-        modelo = new DefaultTableModel(null, titulos);
+    sSQL = "SELECT t.id, t.nombre_usuario, t.tipo_acceso, t.nombre_completo, t.fecha_ingreso " +
+           "FROM Trabajadores t INNER JOIN Persona p ON t.nombre_usuario = p.nombre_usuario " +
+           "WHERE t.nombre_usuario = ? AND p.password = ? AND p.rol = 'Trabajador'";
 
-        sSQL = "select id,nombre_usuario,tipo_acceso,contrseña,"
-                + "nombre_completo,fecha_ingreso from trabajadores"
-                + "on p.idpersona=t.idpersona where t.nombre_usuario='"
-                + usuario + "' and t.contaseña='" + contraseña;
+    try {
+        PreparedStatement pst = cn.prepareStatement(sSQL);
+        pst.setString(1, usuario);
+        pst.setString(2, password);
+        ResultSet rs = pst.executeQuery();
 
-        try {
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sSQL);
+        while (rs.next()) {
+            registro[0] = rs.getString("id");
+            registro[1] = rs.getString("nombre_usuario");
+            registro[2] = rs.getString("tipo_acceso");
+            registro[3] = rs.getString("nombre_completo");
+            registro[4] = rs.getString("fecha_ingreso");
 
-            while (rs.next()) {
-                registro[0] = rs.getString("id");
-                registro[1] = rs.getString("nombre_usuario");
-                registro[2] = rs.getString("tipo_acceso");
-                registro[3] = rs.getString("contraseña");
-                registro[4] = rs.getString("nombre_completo");
-                registro[5] = rs.getString("fecha_ingreso");
-                
-                totalregistros = totalregistros + 1;
-                modelo.addRow(registro);
-
-            }
-            return modelo;
-
-        } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, e);
-            return null;
+            totalregistros++;
+            modelo.addRow(registro);
         }
 
+        return modelo;
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error en login (trabajador): " + e.getMessage());
+        return null;
     }
 }
-
+}
