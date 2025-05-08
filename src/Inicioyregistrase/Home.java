@@ -6,6 +6,7 @@ package Inicioyregistrase;
 
 import Inicioyregistrase.Categoria;
 import Inicioyregistrase.Menu;
+import Inicioyregistrase.Ofertas;
 
 /**
  *
@@ -43,6 +44,9 @@ public class Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
+        setResizable(false);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Añadir un subtítulo (1).png"))); // NOI18N
 
@@ -77,6 +81,11 @@ public class Home extends javax.swing.JFrame {
         btnOfertas.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
         btnOfertas.setForeground(new java.awt.Color(255, 250, 225));
         btnOfertas.setText("Ofertas");
+        btnOfertas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOfertasActionPerformed(evt);
+            }
+        });
 
         btnPerfil.setBackground(new java.awt.Color(57, 36, 20));
         btnPerfil.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
@@ -219,10 +228,17 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoriasActionPerformed
-       Categoria cate = new Categoria();
-       cate.setVisible(true);
-       this.dispose();
+        Categoria cate = new Categoria();
+        cate.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnCategoriasActionPerformed
+
+    private void btnOfertasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOfertasActionPerformed
+        Ofertas ofe = new Ofertas();
+        ofe.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_btnOfertasActionPerformed
 
     /**
      * @param args the command line arguments
