@@ -40,15 +40,18 @@ public class Home extends javax.swing.JFrame {
         btnNuevaOrden = new javax.swing.JButton();
         btnCategorias = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        lblacceso = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Añadir un subtítulo (1).png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(268, 0, 0, 138);
 
         jPanel2.setBackground(new java.awt.Color(255, 250, 225));
 
@@ -117,7 +120,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo empresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo_1.png"))); // NOI18N
         jLabel2.setText("Logo");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -159,47 +162,16 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(124, Short.MAX_VALUE))
         );
 
-        lblacceso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lblaccesoActionPerformed(evt);
-            }
-        });
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 219, 635);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gift chef.gif"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(300, 210, 830, 350);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
-                        .addGap(55, 55, 55)
-                        .addComponent(lblacceso, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(175, 175, 175)
-                        .addComponent(jLabel3)))
-                .addContainerGap(662, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(105, 105, 105)
-                                .addComponent(lblacceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel3)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Añadir un subtítulo (1).png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(220, 0, 990, 150);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -216,10 +188,6 @@ public class Home extends javax.swing.JFrame {
     private void btnNuevaOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaOrdenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevaOrdenActionPerformed
-
-    private void lblaccesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblaccesoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblaccesoActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Menu menu = new Menu();
@@ -287,8 +255,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
-    public static javax.swing.JTextField lblacceso;
     // End of variables declaration//GEN-END:variables
 
     private void dispose(boolean b) {
