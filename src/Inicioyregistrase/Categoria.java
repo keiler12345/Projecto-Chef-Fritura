@@ -99,7 +99,7 @@ public class Categoria extends javax.swing.JFrame {
         btnCategorias.setForeground(new java.awt.Color(255, 250, 225));
         btnCategorias.setText("Categorías");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo empresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo_1.png"))); // NOI18N
         jLabel2.setText("Logo");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
