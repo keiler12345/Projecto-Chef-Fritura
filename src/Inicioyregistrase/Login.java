@@ -90,7 +90,7 @@ public class Login extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(204, 204, 204));
         jLabel7.setText("© 2025 Chef Fritura. Todos los derechos reservados ");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo empresa 222222222777777777777777777.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_empresa.png"))); // NOI18N
         jLabel10.setText("Logo");
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
