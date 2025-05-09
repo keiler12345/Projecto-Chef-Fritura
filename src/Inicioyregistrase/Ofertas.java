@@ -17,7 +17,7 @@ public class Ofertas extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         
-        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel3, "src/Imagenes/Jueves de Empanadas al 2x1.png");
+       rsscalelabel.RSScaleLabel.setScaleLabel(jLabel3, "src/Imagenes/Jueves de Empanadas al 2x1.png");
     }
 
     /**
