@@ -50,7 +50,7 @@ public class Home extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Añadir un subtítulo (1).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Añadir un subtítulo (1).png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(220, 0, 1050, 138);
 

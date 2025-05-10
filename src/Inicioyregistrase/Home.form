@@ -36,7 +36,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Inicioyregistrase/A&#xf1;adir un subt&#xed;tulo (1).png"/>
+          <Image iconType="3" name="/Imagenes/A&#xf1;adir un subt&#xed;tulo (1).png"/>
         </Property>
       </Properties>
       <Constraints>

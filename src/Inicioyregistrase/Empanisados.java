@@ -140,7 +140,7 @@ public class Empanisados extends javax.swing.JFrame {
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
         jPanel1.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 90, -1));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/pizza.jpg"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pizza.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 116, -1));
 
