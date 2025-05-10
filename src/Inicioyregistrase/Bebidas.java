@@ -94,46 +94,39 @@ public class Bebidas extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Century", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bebidas");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(270, 0, 210, 68);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 210, 68));
 
         jLabel2.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Refrescos");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(70, 70, 115, 30);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 115, 30));
 
         jLabel3.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Jugos Naturales");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(290, 80, 145, 22);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 145, -1));
 
         jLabel4.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Batidos");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(570, 80, 67, 22);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 67, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/coca 1.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(50, 110, 70, 143);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 70, 143));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clubbueno.png"))); // NOI18N
         jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(50, 260, 70, 178);
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 70, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Coca-cola");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(130, 120, 60, 20);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 60, -1));
 
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("1 Litro");
@@ -142,8 +135,7 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton1);
-        jRadioButton1.setBounds(130, 150, 56, 21);
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 56, -1));
 
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("500 ML");
@@ -152,18 +144,15 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton2);
-        jRadioButton2.setBounds(130, 170, 61, 21);
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red_r-removebg-preview (1).png"))); // NOI18N
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(60, 440, 50, 155);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 50, 155));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Country Club");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(120, 280, 82, 20);
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 82, -1));
 
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("1Litro");
@@ -172,23 +161,18 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton3);
-        jRadioButton3.setBounds(130, 310, 53, 21);
+        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, -1));
 
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("500 ML");
-        jPanel1.add(jRadioButton4);
-        jRadioButton4.setBounds(130, 330, 61, 21);
-        jPanel1.add(jSpinner1);
-        jSpinner1.setBounds(130, 200, 58, 22);
-        jPanel1.add(jSpinner2);
-        jSpinner2.setBounds(130, 360, 61, 22);
+        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, -1, -1));
+        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 58, -1));
+        jPanel1.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 61, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Red Rock");
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(130, 470, 56, 20);
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 56, -1));
 
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("1Litro");
@@ -197,43 +181,34 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton5);
-        jRadioButton5.setBounds(130, 500, 53, 21);
+        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, -1, -1));
 
         jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton6.setText("500 ML");
-        jPanel1.add(jRadioButton6);
-        jRadioButton6.setBounds(130, 520, 61, 21);
-        jPanel1.add(jSpinner3);
-        jSpinner3.setBounds(130, 550, 55, 22);
+        jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, -1, -1));
+        jPanel1.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 55, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/juice-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(320, 110, 75, 135);
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, 135));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MANGO2.png"))); // NOI18N
         jLabel12.setText("jLabel12");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(300, 260, 98, 151);
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 98, 151));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chinola.png"))); // NOI18N
         jLabel13.setText("jLabel13");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(290, 430, 104, 130);
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 104, 130));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fresa.png"))); // NOI18N
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(570, 120, 67, 128);
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 67, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/banana.png"))); // NOI18N
         jLabel15.setText("jLabel15");
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(550, 290, 84, 132);
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 84, 132));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/papaya.png"))); // NOI18N
         jLabel16.setText("jLabel16");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(560, 430, 69, 122);
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, 69, 122));
 
         jButton1.setText("Añadir al carrito");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -241,44 +216,37 @@ public class Bebidas extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(680, 570, 114, 40);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 570, 140, 40));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Naranja");
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(400, 130, 47, 20);
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 47, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Mango");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(400, 290, 44, 20);
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 44, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Chinola");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(410, 440, 46, 20);
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 46, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Fresa");
-        jPanel1.add(jLabel20);
-        jLabel20.setBounds(640, 140, 32, 20);
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 32, -1));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Banana");
-        jPanel1.add(jLabel21);
-        jLabel21.setBounds(640, 310, 45, 20);
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 45, -1));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Lechosa");
-        jPanel1.add(jLabel22);
-        jLabel22.setBounds(640, 450, 49, 20);
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, 49, -1));
 
         jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton7.setText("Grande");
@@ -287,28 +255,23 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton7);
-        jRadioButton7.setBounds(400, 160, 61, 21);
+        jPanel1.add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
 
         jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton8.setText("Pequeño");
-        jPanel1.add(jRadioButton8);
-        jRadioButton8.setBounds(400, 180, 70, 21);
+        jPanel1.add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 70, -1));
 
         jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton9.setText("Grande");
-        jPanel1.add(jRadioButton9);
-        jRadioButton9.setBounds(400, 320, 61, 21);
+        jPanel1.add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
 
         jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton10.setText("grande");
-        jPanel1.add(jRadioButton10);
-        jRadioButton10.setBounds(400, 470, 60, 21);
+        jPanel1.add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 60, -1));
 
         jRadioButton11.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton11.setText("Peuqño");
-        jPanel1.add(jRadioButton11);
-        jRadioButton11.setBounds(400, 490, 64, 21);
+        jPanel1.add(jRadioButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 64, -1));
 
         jRadioButton12.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton12.setText("Pequeño");
@@ -317,58 +280,44 @@ public class Bebidas extends javax.swing.JFrame {
                 jRadioButton12ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton12);
-        jRadioButton12.setBounds(400, 340, 70, 21);
-        jPanel1.add(jSpinner4);
-        jSpinner4.setBounds(400, 210, 44, 22);
-        jPanel1.add(jSpinner5);
-        jSpinner5.setBounds(400, 370, 46, 22);
-        jPanel1.add(jSpinner6);
-        jSpinner6.setBounds(400, 520, 52, 22);
+        jPanel1.add(jRadioButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 70, -1));
+        jPanel1.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 44, -1));
+        jPanel1.add(jSpinner5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 46, -1));
+        jPanel1.add(jSpinner6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 520, 52, -1));
 
         jRadioButton13.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton13.setText("Grande");
-        jPanel1.add(jRadioButton13);
-        jRadioButton13.setBounds(640, 170, 61, 21);
+        jPanel1.add(jRadioButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, -1, -1));
 
         jRadioButton14.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton14.setText("Pequeño");
-        jPanel1.add(jRadioButton14);
-        jRadioButton14.setBounds(640, 190, 70, 21);
+        jPanel1.add(jRadioButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 70, -1));
 
         jRadioButton15.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton15.setText("Grande");
-        jPanel1.add(jRadioButton15);
-        jRadioButton15.setBounds(640, 340, 61, 21);
+        jPanel1.add(jRadioButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, -1, -1));
 
         jRadioButton16.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton16.setText("Pequeño");
-        jPanel1.add(jRadioButton16);
-        jRadioButton16.setBounds(640, 360, 70, 21);
+        jPanel1.add(jRadioButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 70, -1));
 
         jRadioButton17.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton17.setText("Grande");
-        jPanel1.add(jRadioButton17);
-        jRadioButton17.setBounds(640, 470, 61, 21);
+        jPanel1.add(jRadioButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, -1, -1));
 
         jRadioButton18.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton18.setText("Pequeño");
-        jPanel1.add(jRadioButton18);
-        jRadioButton18.setBounds(640, 490, 70, 21);
-        jPanel1.add(jSpinner7);
-        jSpinner7.setBounds(640, 220, 45, 22);
-        jPanel1.add(jSpinner8);
-        jSpinner8.setBounds(640, 390, 49, 22);
-        jPanel1.add(jSpinner9);
-        jSpinner9.setBounds(640, 520, 53, 22);
+        jPanel1.add(jRadioButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 490, 70, -1));
+        jPanel1.add(jSpinner7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 45, -1));
+        jPanel1.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 49, -1));
+        jPanel1.add(jSpinner9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 520, 53, -1));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.jpg"))); // NOI18N
         jLabel23.setText("jLabel23");
-        jPanel1.add(jLabel23);
-        jLabel23.setBounds(0, -70, 810, 770);
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 810, 770));
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 6, 806, 771);
+        jPanel1.setBounds(0, 5, 810, 630);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

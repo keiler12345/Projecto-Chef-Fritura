@@ -41,17 +41,18 @@ public class Home extends javax.swing.JFrame {
         btnCategorias = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(1265, 634));
+        setMinimumSize(new java.awt.Dimension(1265, 634));
         setUndecorated(true);
-        setResizable(false);
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/Añadir un subtítulo (1).png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(268, 0, 0, 138);
+        jLabel1.setBounds(220, 0, 1050, 138);
 
         jPanel2.setBackground(new java.awt.Color(255, 250, 225));
 
@@ -138,7 +139,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(btnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCategorias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,15 +164,27 @@ public class Home extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 219, 635);
+        jPanel2.setBounds(0, 0, 220, 635);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gift chef.gif"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(300, 210, 830, 350);
+        jLabel3.setBounds(380, 210, 570, 330);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Añadir un subtítulo (1).png"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(220, 0, 990, 150);
+        jPanel1.setBackground(new java.awt.Color(57, 36, 20));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(220, 140, 1000, 500);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -255,7 +268,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 

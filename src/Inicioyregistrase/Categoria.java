@@ -44,6 +44,7 @@ public class Categoria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
+        setMinimumSize(new java.awt.Dimension(1265, 634));
         setUndecorated(true);
         setResizable(false);
 

@@ -45,6 +45,7 @@ public class Ofertas extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1265, 634));
 
         jPanel2.setBackground(new java.awt.Color(255, 250, 225));
 
@@ -156,6 +157,7 @@ public class Ofertas extends javax.swing.JFrame {
         );
 
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0)));
+        jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

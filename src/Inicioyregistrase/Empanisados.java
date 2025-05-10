@@ -62,46 +62,41 @@ public class Empanisados extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
+        setMinimumSize(new java.awt.Dimension(837, 573));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sandwin.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(212, 360, 116, 120);
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 360, 116, 120));
 
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Croquetas de pollo y huevo duro_ Las croquetas de mi madre.jpg"))); // NOI18N
         jLabel6.setText(" ");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(60, 150, 116, 120);
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 116, 120));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Empanadas, per un aperitivo latino.jpg"))); // NOI18N
         jLabel11.setText("jLabel1");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(570, 150, 117, 120);
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 150, 117, 120));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mini chicken empanadas (Pastelitos de pollo).jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(320, 150, 122, 111);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 122, 111));
 
         jLabel13.setFont(new java.awt.Font("Century", 1, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Empanisados");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(250, 50, 317, 59);
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 317, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Empanadas");
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(570, 270, 76, 20);
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 76, -1));
 
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("Normales");
@@ -110,38 +105,31 @@ public class Empanisados extends javax.swing.JFrame {
                 jRadioButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton4);
-        jRadioButton4.setBounds(190, 150, 74, 21);
+        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
 
         jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton7.setText("Grande");
-        jPanel1.add(jRadioButton7);
-        jRadioButton7.setBounds(460, 150, 61, 21);
+        jPanel1.add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
 
         jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton8.setText("Pequeño");
-        jPanel1.add(jRadioButton8);
-        jRadioButton8.setBounds(460, 180, 70, 21);
+        jPanel1.add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 70, -1));
 
         jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton9.setText("Mediano");
-        jPanel1.add(jRadioButton9);
-        jRadioButton9.setBounds(460, 210, 70, 21);
+        jPanel1.add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, -1, -1));
 
         jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton10.setText("Grande");
-        jPanel1.add(jRadioButton10);
-        jRadioButton10.setBounds(710, 150, 61, 21);
+        jPanel1.add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 150, -1, -1));
 
         jRadioButton11.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton11.setText("Pequeño");
-        jPanel1.add(jRadioButton11);
-        jRadioButton11.setBounds(710, 180, 70, 21);
+        jPanel1.add(jRadioButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 180, 70, -1));
 
         jRadioButton12.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton12.setText("Mediano");
-        jPanel1.add(jRadioButton12);
-        jRadioButton12.setBounds(710, 210, 70, 21);
+        jPanel1.add(jRadioButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -151,26 +139,20 @@ public class Empanisados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(690, 510, 119, 33);
-        jPanel1.add(jSpinner2);
-        jSpinner2.setBounds(190, 210, 64, 22);
-        jPanel1.add(jSpinner3);
-        jSpinner3.setBounds(470, 240, 64, 22);
-        jPanel1.add(jSpinner4);
-        jSpinner4.setBounds(710, 240, 64, 22);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 510, 119, 33));
+        jPanel1.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
+        jPanel1.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, -1, -1));
+        jPanel1.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 240, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Mini Sandwiches");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(212, 486, 110, 20);
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 486, 110, -1));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Croquetas");
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(60, 270, 68, 20);
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 68, -1));
 
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("Grandes");
@@ -179,37 +161,30 @@ public class Empanisados extends javax.swing.JFrame {
                 jRadioButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton5);
-        jRadioButton5.setBounds(190, 180, 66, 21);
+        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Pastelitos");
-        jPanel1.add(jLabel24);
-        jLabel24.setBounds(320, 270, 64, 20);
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 64, -1));
 
         jRadioButton30.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton30.setText("Grande");
-        jPanel1.add(jRadioButton30);
-        jRadioButton30.setBounds(346, 360, 61, 21);
+        jPanel1.add(jRadioButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 360, -1, -1));
 
         jRadioButton31.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton31.setText("Mediano");
-        jPanel1.add(jRadioButton31);
-        jRadioButton31.setBounds(346, 387, 70, 21);
-        jPanel1.add(jSpinner8);
-        jSpinner8.setBounds(346, 414, 64, 22);
+        jPanel1.add(jRadioButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 387, -1, -1));
+        jPanel1.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 414, -1, -1));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicioyregistrase/pizza.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
-        jPanel1.add(jLabel26);
-        jLabel26.setBounds(480, 360, 116, 120);
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 116, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Mini tartitas de pizza");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(480, 486, 140, 20);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 486, 140, -1));
 
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Unidad");
@@ -218,32 +193,25 @@ public class Empanisados extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton1);
-        jRadioButton1.setBounds(614, 360, 61, 21);
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 360, -1, -1));
 
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Combo");
-        jPanel1.add(jRadioButton2);
-        jRadioButton2.setBounds(614, 387, 63, 21);
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 387, 63, -1));
 
         jRadioButton6.setText("jRadioButton6");
-        jPanel1.add(jRadioButton6);
-        jRadioButton6.setBounds(696, 354, 98, 0);
-        jPanel1.add(jSpinner1);
-        jSpinner1.setBounds(614, 420, 64, 22);
+        jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 354, 98, 0));
+        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 420, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 850, 580);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 570));
 
         jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 40, 90, 80);
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 90, 80));
 
         jLabel8.setText("jLabel8");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(40, 30, 90, 90);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, 90));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 6, 840, 574);
