@@ -30,7 +30,7 @@ public class conexion {
         Connection link=null;
         
         try {
-            Class.forName("org.gjt.mm.mysql.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             link=DriverManager.getConnection(this.url, this.user, this.pass);
             
         } catch (ClassNotFoundException | SQLException e) {
