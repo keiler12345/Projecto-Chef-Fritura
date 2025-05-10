@@ -5,7 +5,7 @@
 package Inicioyregistrase;
 
 import Inicioyregistrase.Categoria;
-import Inicioyregistrase.Menu;
+import Inicioyregistrase.Empanisados;
 import Inicioyregistrase.Ofertas;
 
 /**
@@ -190,8 +190,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNuevaOrdenActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Menu menu = new Menu();
-        menu.setVisible(true);
+        Empanisados empanisados = new Empanisados();
+        empanisados.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
