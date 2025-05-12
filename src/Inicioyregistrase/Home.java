@@ -46,7 +46,6 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(1265, 634));
         setMinimumSize(new java.awt.Dimension(1265, 634));
         setUndecorated(true);
         getContentPane().setLayout(null);
@@ -176,8 +175,6 @@ public class Home extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 0, 220, 635);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gift chef.gif"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(380, 210, 570, 330);
 

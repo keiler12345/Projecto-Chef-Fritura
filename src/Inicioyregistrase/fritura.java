@@ -221,7 +221,7 @@ public class fritura extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Tostones");
         jPanel1.add(jLabel21);
-        jLabel21.setBounds(370, 480, 48, 16);
+        jLabel21.setBounds(370, 480, 47, 16);
 
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("yuca");
@@ -269,7 +269,7 @@ public class fritura extends javax.swing.JFrame {
         jLabel24.setBounds(0, 0, 780, 580);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 781, 559);
+        jPanel1.setBounds(0, 0, 780, 580);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

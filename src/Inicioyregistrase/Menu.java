@@ -99,7 +99,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel5.setBounds(0, 0, 510, 370);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 507, 369);
+        jPanel1.setBounds(0, 0, 510, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
