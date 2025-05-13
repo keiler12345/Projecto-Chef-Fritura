@@ -41,11 +41,11 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Century", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menú");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(180, 20, 140, 57);
+        jLabel1.setBounds(180, 10, 180, 57);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chinola 1.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -60,10 +60,10 @@ public class Menu extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pizz-removebg-preview.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(332, 116, 121, 113);
+        jLabel4.setBounds(340, 120, 121, 113);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(57, 36, 20));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Bebidas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -72,17 +72,17 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(80, 250, 77, 27);
+        jButton1.setBounds(60, 250, 90, 27);
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(57, 36, 20));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Frituras");
         jPanel1.add(jButton2);
-        jButton2.setBounds(220, 250, 76, 27);
+        jButton2.setBounds(210, 250, 90, 27);
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 102));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(57, 36, 20));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Empanisados");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(350, 250, 110, 27);
+        jButton3.setBounds(340, 250, 120, 27);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/madera.png"))); // NOI18N
         jLabel5.setText("jLabel5");

@@ -79,22 +79,22 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Century", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel1.setText("Frituras");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Pa'Freir Y Gozar");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(270, 10, 232, 50);
+        jLabel1.setBounds(220, 0, 370, 50);
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setFont(new java.awt.Font("Century", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Carnes");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(60, 60, 150, 40);
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel3.setFont(new java.awt.Font("Century", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Acompañamientos");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(50, 320, 330, 30);
@@ -124,30 +124,35 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(330, 108, 114, 108);
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Chicharron");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(54, 222, 59, 16);
+        jLabel9.setBounds(54, 222, 70, 16);
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Pollo frito");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(192, 222, 52, 16);
+        jLabel10.setBounds(192, 222, 60, 16);
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Bandeja completa");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(330, 222, 95, 16);
+        jLabel11.setBounds(330, 222, 110, 16);
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Orejitas de cerdo");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(475, 222, 89, 16);
+        jLabel12.setBounds(475, 222, 100, 16);
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Pollo Asado");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(607, 222, 63, 16);
+        jLabel13.setBounds(607, 222, 80, 16);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1);
@@ -208,30 +213,35 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jLabel18);
         jLabel18.setBounds(610, 370, 115, 108);
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Batata Frita");
         jPanel1.add(jLabel19);
-        jLabel19.setBounds(50, 480, 59, 16);
+        jLabel19.setBounds(50, 480, 70, 16);
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Guineitos");
         jPanel1.add(jLabel20);
-        jLabel20.setBounds(210, 480, 50, 16);
+        jLabel20.setBounds(210, 480, 60, 16);
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Tostones");
         jPanel1.add(jLabel21);
-        jLabel21.setBounds(370, 480, 47, 16);
+        jLabel21.setBounds(370, 480, 60, 16);
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("yuca");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(510, 480, 25, 16);
+        jLabel22.setBounds(510, 480, 40, 16);
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("papas Frita");
         jPanel1.add(jLabel23);
-        jLabel23.setBounds(650, 480, 57, 16);
+        jLabel23.setBounds(650, 480, 70, 16);
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox6);
