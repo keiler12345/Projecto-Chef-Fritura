@@ -293,6 +293,8 @@ public class Categoria extends javax.swing.JFrame {
     }//GEN-LAST:event_labelADDMouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+      Home home = new Home();
+        home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 

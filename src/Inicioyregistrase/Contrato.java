@@ -397,6 +397,8 @@ public class Contrato extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPerfil1ActionPerformed
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+       Home home = new Home();
+        home.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel13MouseClicked
 

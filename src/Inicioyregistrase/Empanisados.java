@@ -98,7 +98,7 @@ public class Empanisados extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Empanisados");
+        jLabel13.setText("Empanizados");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 317, -1));
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
@@ -217,6 +217,8 @@ public class Empanisados extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
 

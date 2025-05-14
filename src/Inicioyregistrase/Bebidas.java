@@ -29,7 +29,7 @@ public class Bebidas extends javax.swing.JFrame {
          rsscalelabel.RSScaleLabel.setScaleLabel(redr, "src/Imagenes/redverde.png");
          rsscalelabel.RSScaleLabel.setScaleLabel(chin, "src/Imagenes/chinola.png");
          rsscalelabel.RSScaleLabel.setScaleLabel(lech, "src/Imagenes/papaya.png");
-          rsscalelabel.RSScaleLabel.setScaleLabel(Fondo, "src/Imagenes/3.png");
+          rsscalelabel.RSScaleLabel.setScaleLabel(Fondo, "src/Imagenes/3.jpg");
     }
 
     /**
@@ -94,6 +94,7 @@ public class Bebidas extends javax.swing.JFrame {
         jComboBox7 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
         o = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         jButton1.setText("Añadir al carrito");
@@ -105,7 +106,7 @@ public class Bebidas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setMinimumSize(new java.awt.Dimension(812, 635));
+        setMinimumSize(new java.awt.Dimension(787, 635));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
@@ -244,6 +245,16 @@ public class Bebidas extends javax.swing.JFrame {
         o.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(o, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
 
+        jLabel15.setFont(new java.awt.Font("Monospaced", 0, 48)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel15.setText("X");
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.jpg"))); // NOI18N
         Fondo.setText("jLabel23");
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 660));
@@ -315,6 +326,12 @@ public class Bebidas extends javax.swing.JFrame {
     JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
     }//GEN-LAST:event_jLabel24MouseClicked
 
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel15MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -382,6 +399,7 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;

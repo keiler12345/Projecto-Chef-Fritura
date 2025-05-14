@@ -32,7 +32,6 @@ public class Home extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btnInicio = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
         btnPedidos = new javax.swing.JButton();
         btnOfertas = new javax.swing.JButton();
@@ -57,17 +56,6 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setBounds(220, 0, 1050, 138);
 
         jPanel2.setBackground(new java.awt.Color(255, 250, 225));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 36, 20), 3));
-
-        btnInicio.setBackground(new java.awt.Color(57, 36, 20));
-        btnInicio.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
-        btnInicio.setForeground(new java.awt.Color(255, 250, 225));
-        btnInicio.setText("Inicio ");
-        btnInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInicioActionPerformed(evt);
-            }
-        });
 
         btnMenu.setBackground(new java.awt.Color(57, 36, 20));
         btnMenu.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
@@ -83,6 +71,11 @@ public class Home extends javax.swing.JFrame {
         btnPedidos.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
         btnPedidos.setForeground(new java.awt.Color(255, 250, 225));
         btnPedidos.setText("Pedidos");
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosActionPerformed(evt);
+            }
+        });
 
         btnOfertas.setBackground(new java.awt.Color(57, 36, 20));
         btnOfertas.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
@@ -134,6 +127,11 @@ public class Home extends javax.swing.JFrame {
         btnCarrito.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
         btnCarrito.setForeground(new java.awt.Color(255, 250, 225));
         btnCarrito.setText("Carrito");
+        btnCarrito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCarritoActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Monospaced", 0, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -158,13 +156,12 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(btnPedidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnSolicitud, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCategorias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCarrito, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabel2)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 6, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -185,22 +182,20 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnOfertas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);
@@ -236,24 +231,24 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        this.dispose();
-        this.setVisible(true);
-    }//GEN-LAST:event_btnInicioActionPerformed
-
     private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
        Profile pro = new Profile();
        pro.setVisible(true);
+       this.dispose();
       
     }//GEN-LAST:event_btnPerfilActionPerformed
 
     private void btnSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolicitudActionPerformed
-        // TODO add your handling code here:
+      Contrato contra = new Contrato();
+      contra.setVisible(true);
+      this.dispose();
     }//GEN-LAST:event_btnSolicitudActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Empanisados empanisados = new Empanisados();
-        empanisados.setVisible(true);
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+                
         
     }//GEN-LAST:event_btnMenuActionPerformed
 
@@ -273,6 +268,18 @@ public class Home extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
        System.exit(0);
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void btnCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarritoActionPerformed
+       carrito carrito = new carrito();
+       carrito.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnCarritoActionPerformed
+
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
+      carrito carrito = new carrito();
+       carrito.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnPedidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,7 +320,6 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCarrito;
     private javax.swing.JButton btnCategorias;
-    private javax.swing.JButton btnInicio;
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnOfertas;
     private javax.swing.JButton btnPedidos;
