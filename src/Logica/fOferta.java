@@ -3,8 +3,7 @@ package Logica;
 
 import java.time.LocalDate;
 import Datos.vMenu;
-import com.mysql.jdbc.PreparedStatement;
-import com.mysql.jdbc.Statement;
+import java.sql.*;
 import java.sql.Connection;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;

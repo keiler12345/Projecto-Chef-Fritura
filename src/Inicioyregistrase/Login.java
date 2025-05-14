@@ -1,5 +1,6 @@
 package Inicioyregistrase;
 
+import Datos.vPersona;
 import Datos.vTrabajadores;
 import Logica.fTrabajadores;
 import javax.swing.table.DefaultTableModel;
@@ -314,6 +315,9 @@ public class Login extends javax.swing.JFrame {
         // Paso 1: Obtener el nombre de usuario y contraseña
         String usuario = txtusuario.getText(); // Suponiendo que txtUsuario es el campo de texto para el usuario
         String contraseña = new String(txtpass.getPassword()); // Suponiendo que txtContraseña es el campo de texto para la contraseña
+        vPersona dts = new vPersona();
+        dts.setNombre_usuario(usuario);
+        dts.setPassword(contraseña);
 
         // Paso 2: Validar si los campos no están vacíos
         if (usuario.isEmpty() || contraseña.isEmpty()) {

@@ -41,6 +41,8 @@ public class fPersona {
             pst.setString(1, usuario);
             pst.setString(2, password);
             ResultSet rs = pst.executeQuery();
+            
+           
 
             if (rs.next()) {
                 return rs.getString("rol"); // Devuelve el rol si existe el usuario

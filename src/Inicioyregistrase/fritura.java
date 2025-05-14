@@ -4,6 +4,10 @@
  */
 package Inicioyregistrase;
 
+import Logica.CarritoManager;
+import Logica.ProductoCarrito;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author xp30p
@@ -27,49 +31,34 @@ public class fritura extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
+        Chicharon = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
         jSpinner4 = new javax.swing.JSpinner();
-        jSpinner5 = new javax.swing.JSpinner();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
         jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
         jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jSpinner6 = new javax.swing.JSpinner();
-        jSpinner7 = new javax.swing.JSpinner();
+        batata = new javax.swing.JSpinner();
         jSpinner8 = new javax.swing.JSpinner();
         jSpinner9 = new javax.swing.JSpinner();
-        jSpinner10 = new javax.swing.JSpinner();
         jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,6 +67,15 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setForeground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(null);
+
+        jButton1.setText("Añadir al Carrito");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(610, 580, 140, 40);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,25 +102,15 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(54, 108, 120, 108);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pf.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(192, 108, 120, 108);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pll-removebg-preview.png"))); // NOI18N
-        jLabel6.setText("jLabel6");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(607, 142, 120, 62);
-
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/orejita.png"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(469, 108, 120, 108);
+        jLabel7.setBounds(560, 110, 120, 108);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carnes2-removebg-preview.png"))); // NOI18N
         jLabel8.setText("jLabel8");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(330, 108, 114, 108);
+        jLabel8.setBounds(330, 110, 114, 108);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -130,88 +118,50 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jLabel9);
         jLabel9.setBounds(54, 222, 70, 16);
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Pollo frito");
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(192, 222, 60, 16);
-
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Bandeja completa");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(330, 222, 110, 16);
+        jLabel11.setBounds(330, 220, 110, 16);
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Orejitas de cerdo");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(475, 222, 100, 16);
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Pollo Asado");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(607, 222, 80, 16);
+        jLabel12.setBounds(560, 220, 100, 16);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1);
         jComboBox1.setBounds(54, 244, 72, 22);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(192, 244, 72, 22);
-
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(330, 244, 72, 22);
+        jComboBox3.setBounds(330, 240, 72, 22);
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox4);
-        jComboBox4.setBounds(475, 244, 72, 22);
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox5);
-        jComboBox5.setBounds(607, 244, 72, 22);
-        jPanel1.add(jSpinner1);
-        jSpinner1.setBounds(54, 272, 42, 22);
-        jPanel1.add(jSpinner2);
-        jSpinner2.setBounds(192, 272, 42, 22);
+        jComboBox4.setBounds(560, 240, 72, 22);
+        jPanel1.add(Chicharon);
+        Chicharon.setBounds(54, 272, 42, 22);
         jPanel1.add(jSpinner3);
-        jSpinner3.setBounds(330, 272, 41, 22);
+        jSpinner3.setBounds(330, 270, 41, 22);
         jPanel1.add(jSpinner4);
-        jSpinner4.setBounds(475, 272, 42, 22);
-        jPanel1.add(jSpinner5);
-        jSpinner5.setBounds(607, 272, 42, 22);
+        jSpinner4.setBounds(560, 270, 42, 22);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/batata-removebg-preview.png"))); // NOI18N
         jLabel14.setText("jLabel14");
         jPanel1.add(jLabel14);
         jLabel14.setBounds(50, 370, 120, 108);
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guineitos-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(190, 370, 120, 108);
-
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ttd1.png"))); // NOI18N
         jLabel16.setText("jLabel16");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(330, 370, 121, 108);
+        jLabel16.setBounds(310, 370, 121, 108);
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yuca1.png"))); // NOI18N
         jLabel17.setText("jLabel17");
         jPanel1.add(jLabel17);
-        jLabel17.setBounds(470, 370, 120, 108);
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/papas-removebg-preview.png"))); // NOI18N
-        jLabel18.setText("jLabel18");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(610, 370, 115, 108);
+        jLabel17.setBounds(520, 370, 120, 108);
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
@@ -219,74 +169,64 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jLabel19);
         jLabel19.setBounds(50, 480, 70, 16);
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Guineitos");
-        jPanel1.add(jLabel20);
-        jLabel20.setBounds(210, 480, 60, 16);
-
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Tostones");
         jPanel1.add(jLabel21);
-        jLabel21.setBounds(370, 480, 60, 16);
+        jLabel21.setBounds(350, 480, 60, 16);
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("yuca");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(510, 480, 40, 16);
-
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("papas Frita");
-        jPanel1.add(jLabel23);
-        jLabel23.setBounds(650, 480, 70, 16);
+        jLabel22.setBounds(560, 480, 40, 16);
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox6);
         jComboBox6.setBounds(50, 500, 72, 22);
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox7);
-        jComboBox7.setBounds(210, 500, 72, 22);
-
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox8);
-        jComboBox8.setBounds(370, 500, 72, 22);
+        jComboBox8.setBounds(350, 500, 72, 22);
 
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox9);
-        jComboBox9.setBounds(510, 500, 72, 22);
-
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox10);
-        jComboBox10.setBounds(650, 500, 72, 22);
-        jPanel1.add(jSpinner6);
-        jSpinner6.setBounds(50, 530, 46, 22);
-        jPanel1.add(jSpinner7);
-        jSpinner7.setBounds(210, 530, 48, 22);
+        jComboBox9.setBounds(560, 500, 72, 22);
+        jPanel1.add(batata);
+        batata.setBounds(50, 530, 46, 22);
         jPanel1.add(jSpinner8);
-        jSpinner8.setBounds(370, 530, 45, 22);
+        jSpinner8.setBounds(350, 530, 45, 22);
         jPanel1.add(jSpinner9);
-        jSpinner9.setBounds(510, 530, 44, 22);
-        jPanel1.add(jSpinner10);
-        jSpinner10.setBounds(650, 530, 43, 22);
+        jSpinner9.setBounds(560, 530, 44, 22);
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1.jpg"))); // NOI18N
         jLabel24.setText("jLabel24");
         jPanel1.add(jLabel24);
-        jLabel24.setBounds(0, 0, 780, 580);
+        jLabel24.setBounds(0, -30, 780, 690);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 780, 580);
+        jPanel1.setBounds(0, 0, 780, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       // Ejemplo: Chicharrón
+    int cantidad = (int) Chicharon.getValue();
+    if (cantidad > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Chicharrón", cantidad, 100.0));
+    }
+
+    // Ejemplo: Batata Frita
+    int cantidadBatata = (int) batata.getValue();
+    if (cantidadBatata > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Batata Frita", cantidadBatata, 50.0));
+    }
+
+    // Agrega lo mismo para los demás productos...
+
+    JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,49 +264,34 @@ public class fritura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSpinner Chicharon;
+    private javax.swing.JSpinner batata;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner10;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
-    private javax.swing.JSpinner jSpinner6;
-    private javax.swing.JSpinner jSpinner7;
     private javax.swing.JSpinner jSpinner8;
     private javax.swing.JSpinner jSpinner9;
     // End of variables declaration//GEN-END:variables
