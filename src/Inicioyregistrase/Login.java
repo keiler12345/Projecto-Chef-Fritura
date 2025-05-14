@@ -9,6 +9,8 @@ import Logica.fPersona;
 import Inicioyregistrase.SignUp;
 
 public class Login extends javax.swing.JFrame {
+    
+    int xMouse, yMouse;
 
     public Login() {
         initComponents();
@@ -84,6 +86,19 @@ public class Login extends javax.swing.JFrame {
 
         Right.setBackground(new java.awt.Color(255, 250, 225));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
+        Right.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                RightMouseDragged(evt);
+            }
+        });
+        Right.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RightMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                RightMousePressed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -395,6 +410,21 @@ public class Login extends javax.swing.JFrame {
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void RightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RightMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RightMouseClicked
+
+    private void RightMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RightMousePressed
+      xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_RightMousePressed
+
+    private void RightMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RightMouseDragged
+         int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_RightMouseDragged
 
     /**
      * @param args the command line arguments

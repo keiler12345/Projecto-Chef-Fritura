@@ -53,7 +53,6 @@ public class Bebidas extends javax.swing.JFrame {
         buttonGroup10 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -66,7 +65,6 @@ public class Bebidas extends javax.swing.JFrame {
         coca = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
         red = new javax.swing.JSpinner();
-        po = new javax.swing.JComboBox<>();
         nara = new javax.swing.JLabel();
         lim = new javax.swing.JLabel();
         chin = new javax.swing.JLabel();
@@ -86,14 +84,7 @@ public class Bebidas extends javax.swing.JFrame {
         platano = new javax.swing.JSpinner();
         lechosa = new javax.swing.JSpinner();
         country = new javax.swing.JSpinner();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        o = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
@@ -115,13 +106,6 @@ public class Bebidas extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(812, 635));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel24.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel24MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 580, 70, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
@@ -168,9 +152,6 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel10.setText("Red Rock");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 100, -1));
         jPanel1.add(red, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, 60, -1));
-
-        po.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(po, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
         jPanel1.add(nara, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 70, 135));
         jPanel1.add(lim, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 70, 151));
 
@@ -221,29 +202,13 @@ public class Bebidas extends javax.swing.JFrame {
         jPanel1.add(lechosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 540, 60, -1));
         jPanel1.add(country, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 60, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, -1, -1));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, -1, -1));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, -1, -1));
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, -1, -1));
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, -1, -1));
-
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
-
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
-
-        o.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(o, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
+        jButton2.setText("Agregar al carrito");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 590, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Monospaced", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(204, 204, 204));
@@ -269,9 +234,14 @@ public class Bebidas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
-    // Ejemplo: Chicharrón
-    int cantidadnaranja = (int) naranja.getValue();
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        int cantidadnaranja = (int) naranja.getValue();
     if (cantidadnaranja > 0) {
         CarritoManager.agregarProducto(new ProductoCarrito("Jugo de naranja", cantidadnaranja, 60.0));
     }
@@ -324,13 +294,7 @@ public class Bebidas extends javax.swing.JFrame {
         CarritoManager.agregarProducto(new ProductoCarrito("Batida de lechosa", cantidadlechosa, 150.0));
     }
     JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
-    }//GEN-LAST:event_jLabel24MouseClicked
-
-    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-        Menu menu = new Menu();
-        menu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel15MouseClicked
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -390,13 +354,7 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JSpinner fresa;
     private javax.swing.JLabel guineo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
@@ -406,7 +364,6 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
@@ -418,9 +375,7 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JSpinner limon;
     private javax.swing.JLabel nara;
     private javax.swing.JSpinner naranja;
-    private javax.swing.JComboBox<String> o;
     private javax.swing.JSpinner platano;
-    private javax.swing.JComboBox<String> po;
     private javax.swing.JSpinner red;
     private javax.swing.JLabel redr;
     // End of variables declaration//GEN-END:variables

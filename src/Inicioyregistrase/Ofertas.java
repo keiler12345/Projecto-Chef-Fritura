@@ -9,6 +9,8 @@ package Inicioyregistrase;
  * @author bryan
  */
 public class Ofertas extends javax.swing.JFrame {
+    
+    int xMouse, yMouse;
 
     /**
      * Creates new form Ofertas
@@ -59,6 +61,16 @@ public class Ofertas extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1265, 634));
 
         jPanel2.setBackground(new java.awt.Color(255, 250, 225));
+        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel2MouseDragged(evt);
+            }
+        });
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel2MousePressed(evt);
+            }
+        });
 
         btnInicio.setBackground(new java.awt.Color(57, 36, 20));
         btnInicio.setFont(new java.awt.Font("Bookman Old Style", 1, 16)); // NOI18N
@@ -302,6 +314,17 @@ public class Ofertas extends javax.swing.JFrame {
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+      xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jPanel2MousePressed
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+          int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jPanel2MouseDragged
 
     /**
      * @param args the command line arguments

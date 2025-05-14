@@ -42,9 +42,6 @@ public class fritura extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        pkjhg = new javax.swing.JComboBox<>();
         Chicharon = new javax.swing.JSpinner();
         bandeja = new javax.swing.JSpinner();
         orejita = new javax.swing.JSpinner();
@@ -54,9 +51,6 @@ public class fritura extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
         batata = new javax.swing.JSpinner();
         frito = new javax.swing.JSpinner();
         yuca = new javax.swing.JSpinner();
@@ -142,18 +136,6 @@ public class fritura extends javax.swing.JFrame {
         jLabel12.setText("Orejitas de cerdo");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(560, 220, 100, 16);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(54, 244, 72, 22);
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(330, 240, 72, 22);
-
-        pkjhg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(pkjhg);
-        pkjhg.setBounds(560, 240, 72, 22);
         jPanel1.add(Chicharon);
         Chicharon.setBounds(54, 272, 42, 22);
         jPanel1.add(bandeja);
@@ -193,18 +175,6 @@ public class fritura extends javax.swing.JFrame {
         jLabel22.setText("yuca");
         jPanel1.add(jLabel22);
         jLabel22.setBounds(560, 480, 40, 16);
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox6);
-        jComboBox6.setBounds(50, 500, 72, 22);
-
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox8);
-        jComboBox8.setBounds(350, 500, 72, 22);
-
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox9);
-        jComboBox9.setBounds(560, 500, 72, 22);
         jPanel1.add(batata);
         batata.setBounds(50, 530, 46, 22);
         jPanel1.add(frito);
@@ -312,11 +282,6 @@ public class fritura extends javax.swing.JFrame {
     private javax.swing.JSpinner batata;
     private javax.swing.JSpinner frito;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -336,7 +301,6 @@ public class fritura extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner orejita;
-    private javax.swing.JComboBox<String> pkjhg;
     private javax.swing.JSpinner yuca;
     // End of variables declaration//GEN-END:variables
 }
