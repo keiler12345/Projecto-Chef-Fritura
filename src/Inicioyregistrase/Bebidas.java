@@ -4,17 +4,32 @@
  */
 package Inicioyregistrase;
 
+import Logica.CarritoManager;
+import Logica.ProductoCarrito;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author xp30p
  */
 public class Bebidas extends javax.swing.JFrame {
+    
+   
+          
 
-    /**
-     * Creates new form Bebidas
-     */
+  
     public Bebidas() {
         initComponents();
+         rsscalelabel.RSScaleLabel.setScaleLabel(coc, "src/Imagenes/coca_1.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(nara, "src/Imagenes/juice.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(fre, "src/Imagenes/fresa.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(con, "src/Imagenes/clubbueno.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(lim, "src/Imagenes/alimon.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(bana, "src/Imagenes/banana.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(redr, "src/Imagenes/redverde.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(chin, "src/Imagenes/chinola.png");
+         rsscalelabel.RSScaleLabel.setScaleLabel(lech, "src/Imagenes/papaya.png");
+          rsscalelabel.RSScaleLabel.setScaleLabel(Fondo, "src/Imagenes/3.png");
     }
 
     /**
@@ -38,38 +53,39 @@ public class Bebidas extends javax.swing.JFrame {
         buttonGroup10 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        coc = new javax.swing.JLabel();
+        con = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        redr = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        coca = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
-        jSpinner3 = new javax.swing.JSpinner();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        red = new javax.swing.JSpinner();
+        po = new javax.swing.JComboBox<>();
+        nara = new javax.swing.JLabel();
+        lim = new javax.swing.JLabel();
+        chin = new javax.swing.JLabel();
+        fre = new javax.swing.JLabel();
+        bana = new javax.swing.JLabel();
+        lech = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        guineo = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jSpinner4 = new javax.swing.JSpinner();
-        jSpinner5 = new javax.swing.JSpinner();
-        jSpinner6 = new javax.swing.JSpinner();
-        jSpinner7 = new javax.swing.JSpinner();
-        jSpinner8 = new javax.swing.JSpinner();
-        jSpinner9 = new javax.swing.JSpinner();
-        jSpinner17 = new javax.swing.JSpinner();
+        naranja = new javax.swing.JSpinner();
+        limon = new javax.swing.JSpinner();
+        chinola = new javax.swing.JSpinner();
+        fresa = new javax.swing.JSpinner();
+        platano = new javax.swing.JSpinner();
+        lechosa = new javax.swing.JSpinner();
+        country = new javax.swing.JSpinner();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
@@ -77,8 +93,8 @@ public class Bebidas extends javax.swing.JFrame {
         jComboBox6 = new javax.swing.JComboBox<>();
         jComboBox7 = new javax.swing.JComboBox<>();
         jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jLabel23 = new javax.swing.JLabel();
+        o = new javax.swing.JComboBox<>();
+        Fondo = new javax.swing.JLabel();
 
         jButton1.setText("Añadir al carrito");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +114,13 @@ public class Bebidas extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(812, 635));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel24MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 580, 70, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
@@ -122,57 +145,43 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Batidos");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, 110, -1));
+        jPanel1.add(coc, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, 143));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/coca 1.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, 143));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clubbueno.png"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 268, 70, 170));
+        con.setText("jLabel7");
+        jPanel1.add(con, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 268, 70, 170));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Coca-cola");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 110, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red_r-removebg-preview (1).png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 50, 155));
+        jPanel1.add(redr, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 50, 155));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Country Club");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 130, -1));
-        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 60, -1));
+        jPanel1.add(coca, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 60, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Red Rock");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 100, -1));
-        jPanel1.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, 60, -1));
+        jPanel1.add(red, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, 60, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+        po.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(po, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+        jPanel1.add(nara, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 70, 135));
+        jPanel1.add(lim, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 70, 151));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/juice-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, 135));
+        chin.setText("jLabel13");
+        jPanel1.add(chin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 104, 130));
+        jPanel1.add(fre, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 67, 130));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/alimon.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 70, 151));
+        bana.setText("jLabel15");
+        jPanel1.add(bana, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 84, 132));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chinola.png"))); // NOI18N
-        jLabel13.setText("jLabel13");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 104, 130));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fresa.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 67, -1));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/banana.png"))); // NOI18N
-        jLabel15.setText("jLabel15");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 84, 132));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/papaya.png"))); // NOI18N
-        jLabel16.setText("jLabel16");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 69, 122));
+        lech.setText("jLabel16");
+        jPanel1.add(lech, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 69, 122));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,22 +203,22 @@ public class Bebidas extends javax.swing.JFrame {
         jLabel20.setText("Fresa");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 80, -1));
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Banana");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 280, 90, -1));
+        guineo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        guineo.setForeground(new java.awt.Color(255, 255, 255));
+        guineo.setText("Banana");
+        jPanel1.add(guineo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 280, 90, -1));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Lechosa");
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 460, 100, -1));
-        jPanel1.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 60, -1));
-        jPanel1.add(jSpinner5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, -1, -1));
-        jPanel1.add(jSpinner6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, 60, -1));
-        jPanel1.add(jSpinner7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 60, -1));
-        jPanel1.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, 60, -1));
-        jPanel1.add(jSpinner9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 540, 60, -1));
-        jPanel1.add(jSpinner17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 60, -1));
+        jPanel1.add(naranja, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 60, -1));
+        jPanel1.add(limon, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, -1, -1));
+        jPanel1.add(chinola, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, 60, -1));
+        jPanel1.add(fresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 60, -1));
+        jPanel1.add(platano, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, 60, -1));
+        jPanel1.add(lechosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 540, 60, -1));
+        jPanel1.add(country, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 60, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, -1, -1));
@@ -232,15 +241,15 @@ public class Bebidas extends javax.swing.JFrame {
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
+        o.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(o, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, -1, -1));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.jpg"))); // NOI18N
-        jLabel23.setText("jLabel23");
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 810, 770));
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/3.jpg"))); // NOI18N
+        Fondo.setText("jLabel23");
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 660));
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 5, 810, 630);
+        jPanel1.setBounds(0, -5, 790, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -248,6 +257,63 @@ public class Bebidas extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
+    // Ejemplo: Chicharrón
+    int cantidadnaranja = (int) naranja.getValue();
+    if (cantidadnaranja > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Jugo de naranja", cantidadnaranja, 60.0));
+    }
+
+    // Ejemplo: Batata Frita
+    int cantidadcoca = (int) coca.getValue();
+    if (cantidadcoca > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Coca-Cola", cantidadcoca, 80.0));
+    }
+
+ // Ejemplo: Batata Frita
+    int cantidadfresa= (int) fresa.getValue();
+    if (cantidadfresa > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Batida de fresa", cantidadfresa, 150.0));
+    }
+
+    // Ejemplo: Batata Fri
+    int cantidadcountry = (int) country.getValue();
+    if (cantidadcountry > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Country Club", cantidadcountry, 80.0));
+    }
+    
+    // Limon
+    int cantidadlimon = (int) limon.getValue();
+    if (cantidadlimon > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Jugo de limon", cantidadlimon, 60.0));
+    }
+    
+    // Ejemplo: Batata Frita
+    int cantidadplatano = (int) platano.getValue();
+    if (cantidadplatano > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Batida de lechosa", cantidadplatano, 150.0));
+    }
+    
+    // Ejemplo: Batata Frita
+    int cantidadred = (int) red.getValue();
+    if (cantidadred > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Red Rock", cantidadred, 80.0));
+    }
+    
+    // Ejemplo: Batata Frita
+    int cantidadchinola = (int) chinola.getValue();
+    if (cantidadchinola > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Jugo de chinola", cantidadchinola, 60.0));
+    }
+    
+    // Ejemplo: Batata Frita
+    int cantidadlechosa = (int) lechosa.getValue();
+    if (cantidadlechosa > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Batida de lechosa", cantidadlechosa, 150.0));
+    }
+    JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
+    }//GEN-LAST:event_jLabel24MouseClicked
 
     /**
      * @param args the command line arguments
@@ -285,6 +351,8 @@ public class Bebidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel bana;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup10;
     private javax.swing.ButtonGroup buttonGroup2;
@@ -295,8 +363,16 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.JLabel chin;
+    private javax.swing.JSpinner chinola;
+    private javax.swing.JLabel coc;
+    private javax.swing.JSpinner coca;
+    private javax.swing.JLabel con;
+    private javax.swing.JSpinner country;
+    private javax.swing.JLabel fre;
+    private javax.swing.JSpinner fresa;
+    private javax.swing.JLabel guineo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -304,39 +380,30 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner17;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
-    private javax.swing.JSpinner jSpinner6;
-    private javax.swing.JSpinner jSpinner7;
-    private javax.swing.JSpinner jSpinner8;
-    private javax.swing.JSpinner jSpinner9;
+    private javax.swing.JLabel lech;
+    private javax.swing.JSpinner lechosa;
+    private javax.swing.JLabel lim;
+    private javax.swing.JSpinner limon;
+    private javax.swing.JLabel nara;
+    private javax.swing.JSpinner naranja;
+    private javax.swing.JComboBox<String> o;
+    private javax.swing.JSpinner platano;
+    private javax.swing.JComboBox<String> po;
+    private javax.swing.JSpinner red;
+    private javax.swing.JLabel redr;
     // End of variables declaration//GEN-END:variables
 }
