@@ -4,6 +4,10 @@
  */
 package Inicioyregistrase;
 
+import Logica.CarritoManager;
+import Logica.ProductoCarrito;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author xp30p
@@ -34,9 +38,9 @@ public class Empanisados extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
-        jSpinner4 = new javax.swing.JSpinner();
+        croquetas = new javax.swing.JSpinner();
+        pastelitos = new javax.swing.JSpinner();
+        mini = new javax.swing.JSpinner();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox5 = new javax.swing.JComboBox<>();
@@ -45,11 +49,11 @@ public class Empanisados extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jSpinner8 = new javax.swing.JSpinner();
+        empanadas = new javax.swing.JSpinner();
         jLabel26 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton6 = new javax.swing.JRadioButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        tartitas = new javax.swing.JSpinner();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -112,10 +116,10 @@ public class Empanisados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, 140, 33));
-        jPanel1.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 50, -1));
-        jPanel1.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 50, -1));
-        jPanel1.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 170, 60, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, 140, 33));
+        jPanel1.add(croquetas, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 50, -1));
+        jPanel1.add(pastelitos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 50, -1));
+        jPanel1.add(mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 170, 60, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 90, -1));
@@ -149,7 +153,7 @@ public class Empanisados extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Pastelitos");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 90, -1));
-        jPanel1.add(jSpinner8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 50, -1));
+        jPanel1.add(empanadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 50, -1));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pizz-removebg-preview.png"))); // NOI18N
         jLabel26.setText("jLabel26");
@@ -163,7 +167,7 @@ public class Empanisados extends javax.swing.JFrame {
 
         jRadioButton6.setText("jRadioButton6");
         jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 354, 98, 0));
-        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 50, -1));
+        jPanel1.add(tartitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 50, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -182,7 +186,34 @@ public class Empanisados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+          int cantidadcroquetas = (int) croquetas.getValue();
+    if (cantidadcroquetas > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Croquetas", cantidadcroquetas, 150.0));
+    }
+    
+    int cantidadpastelitos = (int) pastelitos.getValue();
+    if (cantidadpastelitos > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("pastelitos", cantidadpastelitos, 150.0));
+    }
+    
+    int cantidadmini = (int) mini.getValue();
+    if (cantidadmini > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Mini San", cantidadmini, 150.0));
+    }
+    
+    int cantidadtartitas= (int) tartitas.getValue();
+    if (cantidadtartitas > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Tartitas de pizza", cantidadtartitas, 150.0));
+    }
+    
+    int cantidadempanadas = (int) empanadas.getValue();
+    if (cantidadempanadas > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Empanadas", cantidadempanadas, 50.0));
+        
+      
+    }
+    
+    JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
@@ -226,6 +257,8 @@ public class Empanisados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JSpinner croquetas;
+    private javax.swing.JSpinner empanadas;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -249,11 +282,9 @@ public class Empanisados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner8;
+    private javax.swing.JSpinner mini;
+    private javax.swing.JSpinner pastelitos;
+    private javax.swing.JSpinner tartitas;
     // End of variables declaration//GEN-END:variables
 
     

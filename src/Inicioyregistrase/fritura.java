@@ -44,10 +44,10 @@ public class fritura extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        pkjhg = new javax.swing.JComboBox<>();
         Chicharon = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
-        jSpinner4 = new javax.swing.JSpinner();
+        bandeja = new javax.swing.JSpinner();
+        orejita = new javax.swing.JSpinner();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -58,8 +58,8 @@ public class fritura extends javax.swing.JFrame {
         jComboBox8 = new javax.swing.JComboBox<>();
         jComboBox9 = new javax.swing.JComboBox<>();
         batata = new javax.swing.JSpinner();
-        jSpinner8 = new javax.swing.JSpinner();
-        jSpinner9 = new javax.swing.JSpinner();
+        frito = new javax.swing.JSpinner();
+        yuca = new javax.swing.JSpinner();
         jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -150,15 +150,15 @@ public class fritura extends javax.swing.JFrame {
         jPanel1.add(jComboBox3);
         jComboBox3.setBounds(330, 240, 72, 22);
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox4);
-        jComboBox4.setBounds(560, 240, 72, 22);
+        pkjhg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(pkjhg);
+        pkjhg.setBounds(560, 240, 72, 22);
         jPanel1.add(Chicharon);
         Chicharon.setBounds(54, 272, 42, 22);
-        jPanel1.add(jSpinner3);
-        jSpinner3.setBounds(330, 270, 41, 22);
-        jPanel1.add(jSpinner4);
-        jSpinner4.setBounds(560, 270, 42, 22);
+        jPanel1.add(bandeja);
+        bandeja.setBounds(330, 270, 41, 22);
+        jPanel1.add(orejita);
+        orejita.setBounds(560, 270, 42, 22);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/batata-removebg-preview.png"))); // NOI18N
         jLabel14.setText("jLabel14");
@@ -206,10 +206,10 @@ public class fritura extends javax.swing.JFrame {
         jComboBox9.setBounds(560, 500, 72, 22);
         jPanel1.add(batata);
         batata.setBounds(50, 530, 46, 22);
-        jPanel1.add(jSpinner8);
-        jSpinner8.setBounds(350, 530, 45, 22);
-        jPanel1.add(jSpinner9);
-        jSpinner9.setBounds(560, 530, 44, 22);
+        jPanel1.add(frito);
+        frito.setBounds(350, 530, 45, 22);
+        jPanel1.add(yuca);
+        yuca.setBounds(560, 530, 44, 22);
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1.jpg"))); // NOI18N
         jLabel24.setText("jLabel24");
@@ -224,7 +224,7 @@ public class fritura extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        // Ejemplo: Chicharrón
-    int cantidad = (int) Chicharon.getValue();
+   int cantidad = (int) Chicharon.getValue();
     if (cantidad > 0) {
         CarritoManager.agregarProducto(new ProductoCarrito("Chicharrón", cantidad, 100.0));
     }
@@ -232,8 +232,32 @@ public class fritura extends javax.swing.JFrame {
     // Ejemplo: Batata Frita
     int cantidadBatata = (int) batata.getValue();
     if (cantidadBatata > 0) {
-        CarritoManager.agregarProducto(new ProductoCarrito("Batata Frita", cantidadBatata, 50.0));
+        CarritoManager.agregarProducto(new ProductoCarrito("Batata frita", cantidadBatata, 100.0));
     }
+    
+    int cantidadbandeja = (int) bandeja.getValue();
+    if (cantidadbandeja > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Bandeja", cantidadbandeja, 2500.0));
+    }
+    
+    int cantidadfrito = (int) frito.getValue();
+    if (cantidadBatata > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("frito", cantidadBatata, 100.0));
+    }
+    
+    int cantidadyuca = (int) yuca.getValue();
+    if (cantidadyuca > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Orejita", cantidadyuca, 100.0));
+    }
+    
+    int cantidadorejita = (int) orejita.getValue();
+    if (cantidadorejita > 0) {
+        CarritoManager.agregarProducto(new ProductoCarrito("Orejita", cantidadBatata, 200.0));
+    }
+
+    // Agrega lo mismo para los demás productos...
+
+    JOptionPane.showMessageDialog(this, "Productos agregados al carrito.");
 
     // Agrega lo mismo para los demás productos...
 
@@ -281,11 +305,12 @@ public class fritura extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner Chicharon;
+    private javax.swing.JSpinner bandeja;
     private javax.swing.JSpinner batata;
+    private javax.swing.JSpinner frito;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
@@ -307,9 +332,8 @@ public class fritura extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner8;
-    private javax.swing.JSpinner jSpinner9;
+    private javax.swing.JSpinner orejita;
+    private javax.swing.JComboBox<String> pkjhg;
+    private javax.swing.JSpinner yuca;
     // End of variables declaration//GEN-END:variables
 }
